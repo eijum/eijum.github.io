@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="https://eijum.github.io">
+  <title>我的vim配置 | eijum</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&amp;#x6211;&amp;#x7684;vim&amp;#x914D;&amp;#x7F6E;(ubuntu)&amp;#x5B89;&amp;#x88C5;vim1andrew@ubuntu:~$ sudo apt-get install
+Vundle&amp;#x63D2;&amp;#x4EF6;&amp;#x7BA1;&amp;#x7406;&amp;#x5668;&amp;#x4E0B;&amp;#x8F7D;Vundle1$ git clone https://github.com">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的vim配置">
+<meta property="og:url" content="https://eijum.github.io/2017/01/07/我的vim配置/index.html">
+<meta property="og:site_name" content="eijum">
+<meta property="og:description" content="&amp;#x6211;&amp;#x7684;vim&amp;#x914D;&amp;#x7F6E;(ubuntu)&amp;#x5B89;&amp;#x88C5;vim1andrew@ubuntu:~$ sudo apt-get install
+Vundle&amp;#x63D2;&amp;#x4EF6;&amp;#x7BA1;&amp;#x7406;&amp;#x5668;&amp;#x4E0B;&amp;#x8F7D;Vundle1$ git clone https://github.com">
+<meta property="og:image" content="https://eijum.github.io/2017/01/07/我的vim配置/20170107140306.png">
+<meta property="og:updated_time" content="2017-01-07T06:26:32.486Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="我的vim配置">
+<meta name="twitter:description" content="&amp;#x6211;&amp;#x7684;vim&amp;#x914D;&amp;#x7F6E;(ubuntu)&amp;#x5B89;&amp;#x88C5;vim1andrew@ubuntu:~$ sudo apt-get install
+Vundle&amp;#x63D2;&amp;#x4EF6;&amp;#x7BA1;&amp;#x7406;&amp;#x5668;&amp;#x4E0B;&amp;#x8F7D;Vundle1$ git clone https://github.com">
+<meta name="twitter:image" content="https://eijum.github.io/2017/01/07/我的vim配置/20170107140306.png">
+  
+    <link rel="alternative" href="/atom.xml" title="eijum" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/main.css?v=4.0.0.css">
+  
+
+</head>
+
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="/img/avatar.jpg" class="js-avatar">
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Eijum</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">面朝大海 春暖花开</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/archives">归档</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a data-idx="0" q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a data-idx="1" q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/eijum" title="github"><i class="icon-github"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-sort"></i></div>
+  		<h1 class="header-author js-mobile-header hide">Eijum</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="/img/avatar.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Eijum</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">面朝大海 春暖花开</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">归档</a></li>
+		        
+		        
+		        	<li><a href="/archives/">所有文章</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/eijum" title="github"><i class="icon-github"></i></a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <article id="post-我的vim配置" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      我的vim配置
+    </h1>
+  
+
+        <a href="/2017/01/07/我的vim配置/" class="archive-article-date">
+  	<time datetime="2017-01-07T05:23:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-07</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+       
+          <div id="toc" class="toc-article">
+            <strong class="toc-title">文章目录</strong>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#我的vim配置-ubuntu"><span class="toc-number">1.</span> <span class="toc-text">我的vim配置(ubuntu)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安装vim"><span class="toc-number">1.1.</span> <span class="toc-text">安装vim</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vundle插件管理器"><span class="toc-number">1.2.</span> <span class="toc-text">Vundle插件管理器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#下载Vundle"><span class="toc-number">1.2.1.</span> <span class="toc-text">下载Vundle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插件列表"><span class="toc-number">1.2.2.</span> <span class="toc-text">插件列表</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vundle管理使用"><span class="toc-number">1.2.3.</span> <span class="toc-text">vundle管理使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插件介绍"><span class="toc-number">1.2.4.</span> <span class="toc-text">插件介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#NERDTree"><span class="toc-number">1.2.4.1.</span> <span class="toc-text">NERDTree</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Ctag"><span class="toc-number">1.2.4.2.</span> <span class="toc-text">Ctag</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#taglist"><span class="toc-number">1.2.4.3.</span> <span class="toc-text">taglist</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#tagbar"><span class="toc-number">1.2.4.4.</span> <span class="toc-text">tagbar</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vimrc文件配置技巧"><span class="toc-number">1.3.</span> <span class="toc-text">.vimrc文件配置技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建文件自动补充信息"><span class="toc-number">1.3.1.</span> <span class="toc-text">创建文件自动补充信息</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#效果图"><span class="toc-number">1.4.</span> <span class="toc-text">效果图</span></a></li></ol></li></ol>
+          </div>
+        
+        <h1 id="&#x6211;&#x7684;vim&#x914D;&#x7F6E;-ubuntu"><a href="#&#x6211;&#x7684;vim&#x914D;&#x7F6E;-ubuntu" class="headerlink" title="&#x6211;&#x7684;vim&#x914D;&#x7F6E;(ubuntu)"></a>&#x6211;&#x7684;vim&#x914D;&#x7F6E;(ubuntu)</h1><h2 id="&#x5B89;&#x88C5;vim"><a href="#&#x5B89;&#x88C5;vim" class="headerlink" title="&#x5B89;&#x88C5;vim"></a>&#x5B89;&#x88C5;vim</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">andrew@ubuntu:~$ sudo apt-get install</div></pre></td></tr></table></figure>
+<h2 id="Vundle&#x63D2;&#x4EF6;&#x7BA1;&#x7406;&#x5668;"><a href="#Vundle&#x63D2;&#x4EF6;&#x7BA1;&#x7406;&#x5668;" class="headerlink" title="Vundle&#x63D2;&#x4EF6;&#x7BA1;&#x7406;&#x5668;"></a>Vundle&#x63D2;&#x4EF6;&#x7BA1;&#x7406;&#x5668;</h2><h3 id="&#x4E0B;&#x8F7D;Vundle"><a href="#&#x4E0B;&#x8F7D;Vundle" class="headerlink" title="&#x4E0B;&#x8F7D;Vundle"></a>&#x4E0B;&#x8F7D;Vundle</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="&#x63D2;&#x4EF6;&#x5217;&#x8868;"><a href="#&#x63D2;&#x4EF6;&#x5217;&#x8868;" class="headerlink" title="&#x63D2;&#x4EF6;&#x5217;&#x8868;"></a>&#x63D2;&#x4EF6;&#x5217;&#x8868;</h3><p>1.&#x5728;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x8DEF;&#x5F84;&#x4E0B;&#xFF0C;&#x65B0;&#x5EFA;.vimrc.vundles&#x6587;&#x4EF6;(<strong><code>.vimrc</code>&#x548C;<code>.vimrc.bundles</code>&#x6587;&#x4EF6;&#x5904;&#x4E8E;&#x540C;&#x4E00;&#x7EA7;&#x76EE;&#x5F55;&#x4E0B;</strong>):<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">andrew@ubuntu:~$ touch .vimrc.vundles</div></pre></td></tr></table></figure></p>
+<p>2.&#x4F7F;&#x7528;gedit&#x6253;&#x5F00;:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">andrew@ubuntu:~$ sudo gedit .vimrc.vundles</div></pre></td></tr></table></figure></p>
+<p>3.&#x6211;&#x7684;<code>.vimrc.vundles</code>&#x914D;&#x7F6E;&#x5217;&#x8868;&#x5982;&#x4E0B;:  </p>
+<pre><code>set nocompatible              &quot; be iMproved, required
+filetype off                  &quot; required
+
+&quot; set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+&quot; alternatively, pass a path where Vundle should install plugins
+&quot;call vundle#begin(&apos;~/some/path/here&apos;)
+
+&quot; let Vundle manage Vundle, required
+Plugin &apos;VundleVim/Vundle.vim&apos;
+
+&quot;=================topic start==================
+&quot; view
+&quot; airline
+&quot; &#x72B6;&#x6001;&#x680F;&#x589E;&#x5F3A;&#x5C55;&#x793A;
+Plugin &apos;vim-airline/vim-airline&apos;
+Plugin &apos;vim-airline/vim-airline-themes&apos;
+&quot; rainbow_parentheses
+&quot; &#x62EC;&#x53F7;&#x663E;&#x793A;&#x589E;&#x5F3A;
+Plugin &apos;kien/rainbow_parentheses.vim&apos;
+&quot; &#x4E3B;&#x9898; solarized
+&quot; solarized
+Plugin &apos;altercation/vim-colors-solarized&apos;
+&quot; molokai
+&quot; &#x4E3B;&#x9898; molokai
+Plugin &apos;tomasr/molokai&apos;
+
+&quot;=================nav===========================
+&quot; nerdtree nerdtreetabs
+Plugin &apos;scrooloose/nerdtree&apos;
+&quot; ctrlspace
+Plugin &apos;vim-ctrlspace/vim-ctrlspace&apos;
+&quot;===================end==========================
+
+&quot; syntastic
+Plugin &apos;scrooloose/syntastic&apos;
+
+&quot; auto complete
+&quot; &#x4EE3;&#x7801;&#x81EA;&#x52A8;&#x8865;&#x5168; &#x8FC4;&#x4ECA;&#x4E3A;&#x6B62;&#x7528;&#x5230;&#x7684;&#x6700;&#x597D;&#x7684;&#x81EA;&#x52A8;VIM&#x81EA;&#x52A8;&#x8865;&#x5168;&#x63D2;&#x4EF6;
+&quot; Plugin &apos;Valloric/YouCompleteMe&apos;
+&quot; &#x81EA;&#x52A8;&#x8865;&#x5168;&#x5355;&#x5F15;&#x53F7;&#xFF0C;&#x53CC;&#x5F15;&#x53F7;&#x7B49;
+&quot; Plugin &apos;Raimondi/delimitMate&apos;
+
+&quot; quick edit &#x5FEB;&#x901F;&#x6CE8;&#x91CA;
+Plugin &apos;scrooloose/nerdcommenter&apos;
+
+&quot;=================python===============
+&quot; Plugin &apos;davidhalter/jedi-vim&apos;
+Bundle &apos;davidhalter/jedi-vim&apos;
+Plugin &apos;Lokaltog/vim-powerline&apos;
+Plugin &apos;MatchTag&apos;
+Plugin &apos;delimitMate.vim&apos;
+Plugin &apos;Mark--Karkat&apos;
+Plugin &apos;tmhedberg/SimpylFold&apos;
+Plugin &apos;ctrlpvim/ctrlp.vim&apos;
+Plugin &apos;pydoc.vim&apos;
+Plugin &apos;heavenshell/vim-pydocstring&apos;
+Plugin &apos;pangloss/vim-javascript&apos;
+Plugin &apos;othree/xml.vim&apos;
+Plugin &apos;KohPoll/vim-less&apos;
+Plugin &apos;lepture/vim-css&apos;
+Plugin &apos;taglist.vim&apos;
+Plugin &apos;majutsushi/tagbar&apos; &quot; tagbar
+
+&quot; All of your Plugins must be added before the following line
+call vundle#end()            &quot; required
+filetype plugin indent on    &quot; required
+</code></pre><h3 id="vundle&#x7BA1;&#x7406;&#x4F7F;&#x7528;"><a href="#vundle&#x7BA1;&#x7406;&#x4F7F;&#x7528;" class="headerlink" title="vundle&#x7BA1;&#x7406;&#x4F7F;&#x7528;"></a>vundle&#x7BA1;&#x7406;&#x4F7F;&#x7528;</h3><blockquote>
+<p>:PluginList       - lists configured plugins<br>:PluginInstall    - installs plugins; append <code>!</code> to update or just :PluginUpdate<br>:PluginSearch foo - searches for foo; append <code>!</code> to refresh local cache<br>:PluginClean      - confirms removal of unused plugins; append <code>!</code> to auto-approve removal</p>
+</blockquote>
+<h3 id="&#x63D2;&#x4EF6;&#x4ECB;&#x7ECD;"><a href="#&#x63D2;&#x4EF6;&#x4ECB;&#x7ECD;" class="headerlink" title="&#x63D2;&#x4EF6;&#x4ECB;&#x7ECD;"></a>&#x63D2;&#x4EF6;&#x4ECB;&#x7ECD;</h3><h4 id="NERDTree"><a href="#NERDTree" class="headerlink" title="NERDTree"></a>NERDTree</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nnoremap &lt;F10&gt; :NERDTreeToggle&lt;CR&gt; <span class="comment"># F10</span></div></pre></td></tr></table></figure>
+<h4 id="Ctag"><a href="#Ctag" class="headerlink" title="Ctag"></a>Ctag</h4><p><strong><em>&#x4E00;&#x822C;ctag&#x662F;&#x914D;&#x5408;taglist&#x6216;&#x8005;&#x662F;tagbar&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x7684;</em></strong></p>
+<ul>
+<li><p>&#x9996;&#x5148;&#x9700;&#x8981;&#x5B89;&#x88C5;ctag:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">andrew@ubuntu:~$ sudo apt-get install ctag</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>.vimrc</code>&#x4E2D;&#x8BBE;&#x7F6E;:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span></div><div class="line"><span class="string">&quot;                             ctags</span></div><div class="line">&quot;</div><div class="line"><span class="built_in">let</span> Tlist_Ctags_Cmd=<span class="string">&apos;/usr/bin/ctags&apos;</span></div><div class="line">map &lt;F9&gt; :ctags -R * &lt;CR&gt;</div><div class="line"><span class="string">&quot;&#x7528;&#x6CD5;&#xFF1A;$ ctags &#x2013;R src</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="taglist"><a href="#taglist" class="headerlink" title="taglist"></a>taglist</h4><ul>
+<li><p>&#x5728;<code>.vimrc.vundles</code>&#x4E2D;&#x6DFB;&#x52A0;:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Plugin <span class="string">&apos;taglist.vim&apos;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x5728;<code>.vimrc</code>&#x6587;&#x4EF6;&#x4E2D;&#x914D;&#x7F6E;:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="string">&quot;========================taglist=================================================</span></div><div class="line">let Tlist_Ctags_Cmd=&apos;ctags&apos;</div><div class="line">let Tlist_Show_One_File=1               &quot;&#x4E0D;&#x540C;&#x65F6;&#x663E;&#x793A;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#x7684;tag&#xFF0C;&#x53EA;&#x663E;&#x793A;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x7684;</div><div class="line"><span class="built_in">let</span> Tlist_W<span class="keyword">in</span>Widt =28                    <span class="string">&quot;&#x8BBE;&#x7F6E;taglist&#x7684;&#x5BBD;&#x5EA6;</span></div><div class="line">let Tlist_Exit_OnlyWindow=1             &quot;&#x5982;&#x679C;taglist&#x7A97;&#x53E3;&#x662F;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#xFF0C;&#x5219;&#x9000;&#x51FA;vim</div><div class="line"><span class="built_in">let</span> Tlist_Use_Right_Window=1            <span class="string">&quot;&#x5728;&#x53F3;&#x4FA7;&#x7A97;&#x53E3;&#x4E2D;&#x663E;&#x793A;taglist&#x7A97;&#x53E3;</span></div><div class="line">&quot;<span class="built_in">let</span> Tlist_Use_Left_Windo =1                <span class="string">&quot;&#x5728;&#x5DE6;&#x4FA7;&#x7A97;&#x53E3;&#x4E2D;&#x663E;&#x793A;taglist&#x7A97;&#x53E3;</span></div><div class="line">nnoremap &lt;F8&gt; :TlistToggle&lt;CR&gt;</div><div class="line">&quot;==================================================================================</div></pre></td></tr></table></figure>
+</li>
+<li><p>usages  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#x8DF3;&#x5230;&#x5149;&#x6807;&#x4E0B;tag&#x6240;&#x5B9A;&#x4E49;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x7528;&#x9F20;&#x6807;&#x53CC;&#x51FB;&#x6B64;tag&#x529F;&#x80FD;&#x4E5F;&#x4E00;&#x6837;</div><div class="line">o &#x5728;&#x4E00;&#x4E2A;&#x65B0;&#x6253;&#x5F00;&#x7684;&#x7A97;&#x53E3;&#x4E2D;&#x663E;&#x793A;&#x5149;&#x6807;&#x4E0B;tag</div><div class="line">&#x663E;&#x793A;&#x5149;&#x6807;&#x4E0B;tag&#x7684;&#x539F;&#x578B;&#x5B9A;&#x4E49;</div><div class="line">u &#x66F4;&#x65B0;taglist&#x7A97;&#x53E3;&#x4E2D;&#x7684;tag</div><div class="line">s &#x66F4;&#x6539;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;&#xFF0C;&#x5728;&#x6309;&#x540D;&#x5B57;&#x6392;&#x5E8F;&#x548C;&#x6309;&#x51FA;&#x73B0;&#x987A;&#x5E8F;&#x6392;&#x5E8F;&#x95F4;&#x5207;&#x6362;</div><div class="line">x taglist&#x7A97;&#x53E3;&#x653E;&#x5927;&#x548C;&#x7F29;&#x5C0F;&#xFF0C;&#x65B9;&#x4FBF;&#x67E5;&#x770B;&#x8F83;&#x957F;&#x7684;tag</div><div class="line">= &#x5C06;&#x6240;&#x6709;tag&#x6298;&#x53E0;&#x8D77;&#x6765;</div><div class="line">[[ &#x8DF3;&#x5230;&#x524D;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;</div><div class="line">]] &#x8DF3;&#x5230;&#x540E;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;</div><div class="line">q &#x5173;&#x95ED;taglist&#x7A97;&#x53E3;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="tagbar"><a href="#tagbar" class="headerlink" title="tagbar"></a>tagbar</h4><ul>
+<li><p>&#x5728;<code>.vimrc.vundles</code>&#x4E2D;&#x6DFB;&#x52A0;:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">&quot; Plugin &apos;majutsushi/tagbar&apos;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>&#x5728;<code>.vimrc</code>&#x6587;&#x4EF6;&#x4E2D;&#x914D;&#x7F6E;:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;</span></div><div class="line">&quot;				tagbar</div><div class="line"><span class="string">&quot;autocmd BufRead *.* nmap tb :Tagbar&lt;cr&gt;</span></div><div class="line">&quot;<span class="built_in">let</span> tagbar_ctags_bin=<span class="string">&apos;/usr/bin/ctags&apos;</span></div><div class="line"><span class="string">&quot;let tagbar_width=35</span></div><div class="line">&quot;<span class="built_in">let</span> g:tagbar_compact = 1</div><div class="line"><span class="string">&quot;let g:tagbar_autoshowtag = 1</span></div><div class="line">&quot;<span class="built_in">let</span> Tlist_Show_One_File=1  </div><div class="line"><span class="string">&quot;let Tlist_Exit_OnlyWindow=1 </span></div><div class="line">let g:tagbar_ctags_bin=&apos;ctags&apos;            &quot;ctags&#x7A0B;&#x5E8F;&#x7684;&#x8DEF;&#x5F84;</div><div class="line"><span class="built_in">let</span> g:tagbar_width=30                    <span class="string">&quot;&#x7A97;&#x53E3;&#x5BBD;&#x5EA6;&#x7684;&#x8BBE;&#x7F6E;</span></div><div class="line">map &lt;F3&gt; :Tagbar&lt;CR&gt;</div><div class="line">&quot;<span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>usages</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;ctrl-T&gt; <span class="comment"># &#x8DF3;&#x8F6C;&#x5230;&#x5B9A;&#x4E49;&#x5904;</span></div><div class="line">&lt;ctrl-]&gt; <span class="comment"># &#x8DF3;&#x56DE;&#x4E0A;&#x4E00;&#x5C42;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="vimrc&#x6587;&#x4EF6;&#x914D;&#x7F6E;&#x6280;&#x5DE7;"><a href="#vimrc&#x6587;&#x4EF6;&#x914D;&#x7F6E;&#x6280;&#x5DE7;" class="headerlink" title=".vimrc&#x6587;&#x4EF6;&#x914D;&#x7F6E;&#x6280;&#x5DE7;"></a><code>.vimrc</code>&#x6587;&#x4EF6;&#x914D;&#x7F6E;&#x6280;&#x5DE7;</h2><h3 id="&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x81EA;&#x52A8;&#x8865;&#x5145;&#x4FE1;&#x606F;"><a href="#&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x81EA;&#x52A8;&#x8865;&#x5145;&#x4FE1;&#x606F;" class="headerlink" title="&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x81EA;&#x52A8;&#x8865;&#x5145;&#x4FE1;&#x606F;"></a>&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x81EA;&#x52A8;&#x8865;&#x5145;&#x4FE1;&#x606F;</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line"><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span></div><div class="line">autocmd BufNewFile *.py,*.cc,*.sh,*.java <span class="built_in">exec</span> <span class="string">&quot;:call SetTitle()&quot;</span> </div><div class="line"><span class="string">&quot;&#x65B0;&#x5EFA;.py&#x548C;.java&#x5B9A;&#x4E49;&#x51FD;&#x6570;SetTitle&#xFF0C;&#x81EA;&#x52A8;&#x63D2;&#x5165;&#x6587;&#x4EF6;&#x5934;  </span></div><div class="line">func SetTitle()  </div><div class="line">        &quot;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#x4E3A;.sh&#x6587;&#x4EF6;  </div><div class="line">        <span class="keyword">if</span> &amp;filetype == <span class="string">&apos;python&apos;</span>  </div><div class="line">		call setline(1, <span class="string">&quot;\# /usr/bin/python&quot;</span>) </div><div class="line">                call setline(2, <span class="string">&quot;\# -*-coding=utf8-*-&quot;</span>)  </div><div class="line">                call setline(3, <span class="string">&quot;\&quot;\&quot;\&quot;&quot;</span>)  </div><div class="line">                call setline(4, <span class="string">&quot;\# Author: andrew&quot;</span>)  </div><div class="line">                call setline(5, <span class="string">&quot;\# Created Time : &quot;</span>.strftime(<span class="string">&quot;%c&quot;</span>))  </div><div class="line">                call setline(6, <span class="string">&quot;&quot;</span>)  </div><div class="line">                call setline(7, <span class="string">&quot;\# File Name: &quot;</span>.expand(<span class="string">&quot;%&quot;</span>))  </div><div class="line">                call setline(8, <span class="string">&quot;\# Description:&quot;</span>)  </div><div class="line">                call setline(9, <span class="string">&quot;&quot;</span>)  </div><div class="line">                call setline(10, <span class="string">&quot;\&quot;\&quot;\&quot;&quot;</span>)  </div><div class="line">                call setline(11,<span class="string">&quot;&quot;</span>)  </div><div class="line">        endif  </div><div class="line">        <span class="keyword">if</span> &amp;filetype == <span class="string">&apos;java&apos;</span>  </div><div class="line">                call setline(1, <span class="string">&quot;//-*-coding=utf8-*-&quot;</span>)  </div><div class="line">                call setline(2, <span class="string">&quot;/*************************************************************************&quot;</span>)  </div><div class="line">                call setline(3, <span class="string">&quot;\ @Author: andrew&quot;</span>)  </div><div class="line">                call setline(4, <span class="string">&quot;\ @Created Time : &quot;</span>.strftime(<span class="string">&quot;%c&quot;</span>))  </div><div class="line">                call setline(5, <span class="string">&quot;&quot;</span>)  </div><div class="line">                call setline(6, <span class="string">&quot;\ @File Name: &quot;</span>.expand(<span class="string">&quot;%&quot;</span>))  </div><div class="line">                call setline(7, <span class="string">&quot;\ @Description:&quot;</span>)  </div><div class="line">                call setline(8, <span class="string">&quot;&quot;</span>)  </div><div class="line">                call setline(9, <span class="string">&quot; ************************************************************************/&quot;</span>)  </div><div class="line">                call setline(10,<span class="string">&quot;&quot;</span>)  </div><div class="line">        endif  </div><div class="line">endfunc</div><div class="line"></div><div class="line"></div><div class="line"><span class="string">&quot; modify the last modified time of a file  </span></div><div class="line">function SetLastModifiedTime(lineno)  </div><div class="line">        let modif_time = strftime(&quot;%c<span class="string">&quot;)  </span></div><div class="line">        if a:lineno == &quot;-1<span class="string">&quot;  </span></div><div class="line">                let line = getline(6)  </div><div class="line">        else  </div><div class="line">                let line = getline(a:lineno)  </div><div class="line">        endif      </div><div class="line">        if line =~ &apos;^////\sLast Modified&apos;  </div><div class="line">                let line = substitute( line,&apos;:\s\+.*\d\{4\}&apos;, &apos;:&apos;.modif_time, &quot;<span class="string">&quot; )  </span></div><div class="line">        else  </div><div class="line">                let line = &apos;  Last Modified: &apos;.modif_time  </div><div class="line">        endif  </div><div class="line">        if a:lineno == &quot;-1<span class="string">&quot;  </span></div><div class="line">                call setline(5, line)  </div><div class="line">        else  </div><div class="line">                call append(a:lineno, line)  </div><div class="line">        endif  </div><div class="line">endfunction  </div><div class="line">  </div><div class="line">&quot; map the SetLastModifiedTime <span class="built_in">command</span> automatically  </div><div class="line">au BufWrite *.py,*.java call SetLastModifiedTime(-1)</div><div class="line"></div><div class="line"><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;&quot;</span><span class="string">&quot;</span></div></pre></td></tr></table></figure>
+<h2 id="&#x6548;&#x679C;&#x56FE;"><a href="#&#x6548;&#x679C;&#x56FE;" class="headerlink" title="&#x6548;&#x679C;&#x56FE;"></a>&#x6548;&#x679C;&#x56FE;</h2><p><img src="/2017/01/07/&#x6211;&#x7684;vim&#x914D;&#x7F6E;/20170107140306.png" alt="picture"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<i class="icon-book icon"></i>
+	<a class="article-category-link" href="/categories/vim/">vim</a>
+	</div>
+
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/01/02/ubuntu下搭建samba服务/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ubuntu下搭建samba服务</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="我的vim配置" data-title="我的vim配置" data-url="https://eijum.github.io/2017/01/07/我的vim配置/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"eijum"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+  
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Eijum
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="/./main.js?v=4.0.0.js"></script>
+
+
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">ebook</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">ubuntu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">samba</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">yilia</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)">vim</a>
+              </li>
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-me" q-show="aboutme">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">面朝大海 春暖花开&lt;br&gt;从明天起，做一个幸福的人&lt;br&gt;喂马、劈柴，周游世界&lt;br&gt;从明天起，关心粮食和蔬菜&lt;br&gt;我有一所房子，面朝大海，春暖花开&lt;br&gt;从明天起，和每一个亲人通信&lt;br&gt;告诉他们我的幸福&lt;br&gt;那幸福的闪电告诉我的&lt;br&gt;我将告诉每一个人&lt;br&gt;给每一条河每一座山取一个温暖的名字&lt;br&gt;陌生人，我也为你祝福&lt;br&gt;愿你有一个灿烂的前程&lt;br&gt;愿你有情人终成眷属&lt;br&gt;愿你在尘世获得幸福&lt;br&gt;我只愿面朝大海，春暖花开&lt;br&gt;</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
